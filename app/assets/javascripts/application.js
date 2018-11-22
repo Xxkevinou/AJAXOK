@@ -25,7 +25,7 @@ $(document).ready(function(){
         $(".mailer div").removeClass("active"); //Remove any "active" class
         $(".tab_content").hide();
         $(this).addClass("active"); //Add "active" class to selected tab
-        $(this).addClass("read");
+        $(this).removeClass("unread");
         $(".active .tab_content").show(); //Show tab content of active tab
     });
 

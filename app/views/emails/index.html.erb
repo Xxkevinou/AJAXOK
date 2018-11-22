@@ -2,7 +2,7 @@
   <ul class="mailer">
     <% i= 1 %>
     <% @email.each do |email|%>
-      <div class="tab<%= i %> caca">
+      <div class="tab<%= i %> caca unread">
         <li class="titretab<%= i %>"><%= email.object  %></li>
         <% i += 1%>
         <div class="tab_content">
