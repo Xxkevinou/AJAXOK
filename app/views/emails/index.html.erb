@@ -1,0 +1,23 @@
+<div class="tout">
+  <ul class="mailer">
+    <% i= 1 %>
+    <% @email.each do |email|%>
+      <div class="tab<%= i %> caca">
+        <li class="titretab<%= i %>"><%= email.object  %></li>
+        <% i += 1%>
+        <div class="tab_content">
+          <ul>
+              <li>
+                <h1><%=email.object%></h1>
+                <%= email.body  %>
+                <tr>
+                <td><%= link_to 'Destroy', email, method: :delete, data: { confirm: 'Are you sure?' }, 
+                    :remote => true, :class => 'delete_email'%></td>
+              </li>
+              </tr>
+          </ul>
+        </div>
+      </div>
+    <% end %>
+  </ul>
+</div>
